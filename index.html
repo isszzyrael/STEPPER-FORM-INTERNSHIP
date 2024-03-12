@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a56bdae329.js" crossorigin="anonymous"></script>
+    <title>Simple Form Stepper</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 class="aceplora">Aceplora Internship Review Form</h2>
+
+        <form action="#" class="forms">
+            <div class="stepper">
+                <div class="steps step-active">1</div>
+                <div class="steps">2</div>
+                <div class="steps">3</div>
+                <div class="steps">4</div>
+                <div class="line"></div>
+            </div>
+            <div class="helper-text" id="filltext">Please ensure you fill the form correctly</div>
+
+            <div class="pages active-page">
+                <div class="inputBox">
+
+
+                    <!-- name, email address,  location -->
+                    <span>Name</span>
+                    <input type="text" name="full-name" id="name" placeholder="Joy Praise" />
+
+                    <br />
+                    <span>Email</span>
+                    <input type="email" name="email-name" id="email" placeholder="example@aceplora.com" />
+
+                    <br />
+                    <span>Location</span>
+                    <input type="text" name="location" id="location" placeholder="Ondo, Nigeria" />
+                    <br />
+                </div>
+
+            </div>
+
+            <div class="pages">
+                <!-- course, ,  location -->
+                <div class="inputBox">
+                    <span>Phone Number</span>
+                    <input type="tel" name="phone-number" id="phonenumber" placeholder="0812 XXX XXXX" />
+
+                    <br />
+                    <select id="enrolled-course" itemid="course">
+                        <option value="" selected>Please select an option</option>
+                        <option value="ui-ux">User interface / User Experience</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="android">Android App Development</option>
+                        <option value="product-design">Product Design</option>
+                    </select>
+                    <br />
+
+                    <select id="gender" itemid="gender">
+                        <option value="" selected="selected">Please select a gender</option>
+                        <option value="male">Male</option>
+                        <option value="male">Female</option>
+                        <option value="binary">Binary</option>
+                        <option value="Gay">Gay</option>
+                        <option value="Les">Lesbian</option>
+                    </select>
+
+                    <br />
+
+                </div>
+            </div>
+
+            <div class="pages">
+                <!-- name, email address,  location -->
+                <textarea name="reviews" id="comments" cols="40" rows="10"
+                    placeholder="Leave us a Comment Here"></textarea>
+                <div class="rating-text">
+                    <h5>Give us a Rating </h5>
+                </div>
+                <div class="rating" id="rating">
+
+                    <i class="fa fa-star  rate" aria-hidden="true"></i>
+                    <i class="fa fa-star  rate" aria-hidden="true"></i>
+                    <i class="fa fa-star  rate" aria-hidden="true"></i>
+                    <i class="fa fa-star  rate" aria-hidden="true" checked></i>
+                    <i class="fa fa-star rate" aria-hidden="true"></i>
+                </div>
+                <br />
+            </div>
+
+
+            <div class="pages">
+                Thanks You for a Succesfully submitting
+            </div>
+            <div class="btn-container">
+                <button class="prev" id="prevBtn" onclick="prevBtnClicked()" type="button">Prev</button>
+                <button class="next" id="nextBtn" onclick="nextBtnClicked()" type="button">Next</button>
+                <button class="submit" id="submitBtn" onclick="submitBtnClicked()" type="button">Submit</button>
+            </div>
+        </form>
+
+
+    </div>
+
+    <table id="review-container">
+
+        <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Locale</th>
+            <th>Number</th>
+            <th>Course</th>
+            <th>Gender</th>
+            <th>Comments</th>
+            <th>Rating</th>
+          </tr>
+
+        <!-- <div class="card">
+
+            <div>Name: <span id="review-name"> </span> </div>
+            <div> E-mail: <span id="review-email"> </span></div>
+            <div>Location: <span id="review-location"> </span></div>
+            <div>Phone-Number: <span id="review-number"> </span></div>
+            <div>Course: <span id="review-course"> </span></div>
+            <div>Gender: <span id="review-gender"> </span></div>
+            <div>Commments: <span id="review-comments"> </span></div>
+            <div>Rating: <span id="review-rating"> </span> <i class="fa fa-star review-rate" aria-hidden="true"
+                    checked></i></div>
+        </div> -->
+    </table>
+
+</body>
+<script src="./app.js"></script>
+
+</html>

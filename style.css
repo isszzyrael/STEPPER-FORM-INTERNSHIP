@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background: rgb(100,70,161);
+  background: linear-gradient(62deg, rgba(100,70,161,1) 31%, rgba(163,126,237,1) 62%, rgba(100,70,161,1) 88%);  display: block;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+   
+}
+
+/* stepper */
+.stepper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  gap: 52px;
+  position: relative;
+  z-index: 1;
+}
+.line{
+  position: absolute;
+  margin-top:1rem;
+  width: 250px;
+  height: 1px;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+.steps{
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  background-color: #94bbe9;
+  color: #fff;
+  font-size: 600;
+  margin-top: 1rem;
+}
+.step-active{
+  border-radius: 50px;
+  background: #d8cb0f; 
+}
+/* form div */
+
+.form-container{
+  margin: 60px auto;
+  background-color: #6446a1;
+  border-radius: 0.5rem;
+  padding: 1.2rem 2rem;
+  width: clamp(450px, 30%, 300px);
+  border: 1px solid rgb(158, 155, 155);
+  box-shadow: 3px 3px 5px #d8cb0f;
+  min-height: 80vh;
+}
+
+.aceplora{
+     text-align: center;
+     color: #fff;
+}
+
+span{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+div.inputBox{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+input{
+  width: 100%;
+  height: 4rem;
+  outline: 0;
+  padding: 0 10px;
+  border: 1px solid #21c79d;
+  background: #94bbe9;
+  border-radius: 10px;
+  color: #fff;
+}
+span{
+  /* position: absolute; */
+  padding: 0 10px;
+  left: 0;
+  pointer-events: none;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+select{
+  padding: 0 8px;
+  outline: none;
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #d8cb0f;
+  background: #94bbe9;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.pages{
+  display: none;
+}
+
+.active-page{
+  display: block;
+}
+.helper-text{
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* button */
+button{
+  border: 1px solid;
+  justify-content: space-around;
+  background: linear-gradient(62deg, rgba(100,70,161,1) 31%, rgba(163,126,237,1) 62%, rgba(100,70,161,1) 88%);  display: block;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 8px;
+}
+.btn-container{
+  justify-content: space-between;
+  display: flex;
+  padding: 0 1rem;
+}
+button#submitBtn{
+  display:none;
+}
+/* enrolled course */
+
+
+/* textarea */
+textarea{
+  /* padding: 10px; */
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  padding: 5px ;
+  background-color: #6446a1;
+  border: 2px solid #d8cb0f;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* rating */
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  
+}
+.rating-text{
+  text-align: center;
+}
+.checked{
+  color: #21c79d;
+}
+
+
+table{
+  padding: 1rem;
+  border-radius: 16px;
+  width: 90%;
+  color: #fff;
+}
+td,th{
+  border: 1px solid #d8cb0f;
+  padding: 8px;
+}
+th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #6446a1;
+  color: #fff;
+  font-weight: 600;
+}
+tr:nth-child(even){
+  background-color: #a37eed;
+}
+
+ tr:hover {background-color: #a37eed;}
+
+
+/* div.table-row{
+  
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* div.form-container {
+  margin: 3rem auto;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 80%;
+  background-color: rgb(116, 99, 99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+div.form-container h1 {
+  color: #fff;
+}
+
+form div.stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
+  margin: 2rem auto;
+  background: greenyellow;
+}
+form div.stepper div.step-1, form div.stepper div.step-2, form div.stepper div.step-3 {
+  background: blue;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}# sourceMappingURL=style.css.map */

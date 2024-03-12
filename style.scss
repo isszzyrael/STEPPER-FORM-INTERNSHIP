@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexbox($jc:center, $ai:center, $fd: row ){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    @include flexbox(center,center ,column );
+}
+
+
+div.form-container{
+
+    margin: 3rem auto;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 80%;
+    background-color: rgb(116, 99, 99);
+    @include flexbox(center,center ,column );
+    
+
+    h1{
+        color: #fff;
+    }
+}
+
+
+form{
+    div.stepper{
+        @include flexbox(center,center ,row);
+        gap:3rem;
+        width: 100%;
+        margin: 2rem auto;
+       background: greenyellow;
+        div.step-1, div.step-2, div.step-3{
+            background: blue;
+            width:2rem;
+            height:2rem;
+            border-radius:50%;
+            @include flexbox(center,center ,row )
+        }
+    }
+}
